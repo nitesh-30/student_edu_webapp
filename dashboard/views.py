@@ -150,7 +150,7 @@ def books(request):
     if request.method == 'POST':
         form=DashboardFom(request.POST)
         text=request.POST['text']
-        url="https://www.googleapis.com/books/v1/volumes?q=quilting"+text
+        url="https://www.googleapis.com/books/v1/volumes?q="+text
         r=requests.get(url)
         answer=r.json()
         result_list=[]
