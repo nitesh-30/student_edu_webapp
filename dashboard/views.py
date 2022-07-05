@@ -327,3 +327,8 @@ def profile(request):
 
 
     return render(request,"dashboard/profile.html",context)
+def rec(request):
+    products= product.objects.all()
+    data={}
+    data['products']=products
+    return render(request,"dashboard/rec.html",data)
